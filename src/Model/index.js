@@ -19,7 +19,6 @@ const updateTask = async (id, status) => {
 
 const remove = async (id) => {
   const removeTask = await model.deleteOne({ _id: id });
-  console.log(removeTask);
 
   return removeTask;
 };
