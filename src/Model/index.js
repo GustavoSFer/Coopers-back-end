@@ -6,6 +6,12 @@ const getAll = async () => {
   return list;
 };
 
+const getStatus = async (status) => {
+  const list = await model.find({ status });
+
+  return list;
+};
+
 const postList = async (task, status) => {
   const addTask = await model.create({ task, status, date: new Date() });
 
@@ -25,6 +31,7 @@ const remove = async (id) => {
 
 module.exports = {
   getAll,
+  getStatus,
   postList,
   updateTask,
   remove,

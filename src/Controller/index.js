@@ -6,6 +6,14 @@ const getAll = async (_req, res) => {
   return res.status(200).json(list);
 };
 
+const getStatus = async (req, res) => {
+  const { status } = req.body;
+  console.log(status);
+  const list = await service.getStatus(status);
+
+  return res.status(200).json(list);
+};
+
 const postList = async (req, res) => {
   const { task, status } = req.body;
   const addTask = await service.postList(task, status);
@@ -29,6 +37,7 @@ const remove = async (req, res) => {
 
 module.exports = {
   getAll,
+  getStatus,
   postList,
   updateTask,
   remove,
