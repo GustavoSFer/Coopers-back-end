@@ -7,6 +7,13 @@ const login = async (email) => {
   return user;
 };
 
+const create = async (email, password) => {
+  const user = await model.create({ email, password });
+
+  return user;
+};
+
 module.exports = {
   login,
+  create,
 }
