@@ -6,5 +6,6 @@ const route = Router();
 
 route.get('/', listController.getAll);
 route.post('/', validationPost, listController.postList);
+route.put('/', validationPut, listController.updateTask);
 
 module.exports = route;

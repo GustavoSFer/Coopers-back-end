@@ -9,7 +9,13 @@ const postList = async (task, status) => {
   return addTask;
 };
 
+const updateTask = async (id, status) => {
+  const updatingTask = await listModel.updateTask(id, status);
+  return updatingTask;
+};
+
 module.exports = {
   getAll,
   postList,
+  updateTask,
 };

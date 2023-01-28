@@ -13,8 +13,16 @@ const postList = async (req, res) => {
   return res.status(201).json(addTask);
 };
 
+const updateTask = async (req, res) => {
+  const { id, status } = req.body;
+  const updatingTask = await service.updateTask(id, status);
+
+  return res.status(200).json(updatingTask);
+};
+
 
 module.exports = {
   getAll,
   postList,
+  updateTask,
 };
