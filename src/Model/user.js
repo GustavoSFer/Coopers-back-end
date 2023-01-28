@@ -13,7 +13,14 @@ const create = async (email, password) => {
   return user;
 };
 
+const getAll = async () => {
+  const users = await model.find();
+
+  return users;
+};
+
 module.exports = {
   login,
   create,
+  getAll,
 }
