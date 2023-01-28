@@ -20,9 +20,17 @@ const updateTask = async (req, res) => {
   return res.status(200).json(updatingTask);
 };
 
+const remove = async (req, res) => {
+  const { id } = req.params;
+  console.log('>>>>>>', id);
+  const removeTask = await service.remove(id);
+
+  res.status(200).json(removeTask);
+};
 
 module.exports = {
   getAll,
   postList,
   updateTask,
+  remove,
 };

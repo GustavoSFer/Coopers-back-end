@@ -17,8 +17,16 @@ const updateTask = async (id, status) => {
   return updatingTask;
 };
 
+const remove = async (id) => {
+  const removeTask = await model.deleteOne({ _id: id });
+  console.log(removeTask);
+
+  return removeTask;
+};
+
 module.exports = {
   getAll,
   postList,
   updateTask,
+  remove,
 };

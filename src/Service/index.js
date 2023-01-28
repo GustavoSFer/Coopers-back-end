@@ -14,8 +14,15 @@ const updateTask = async (id, status) => {
   return updatingTask;
 };
 
+const remove = async (id) => {
+  const removeTask = await listModel.remove(id);
+
+  return removeTask;
+};
+
 module.exports = {
   getAll,
   postList,
   updateTask,
+  remove,
 };
