@@ -8,7 +8,6 @@ const getAll = async (_req, res) => {
 
 const getStatus = async (req, res) => {
   const { status } = req.body;
-  console.log(status);
   const list = await service.getStatus(status);
 
   return res.status(200).json(list);
