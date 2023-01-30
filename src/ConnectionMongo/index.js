@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost:27017/coopers');
+const dbUri = process.env.DB_URI || 'mongodb://localhost:27017/coopers';
+
+mongoose.connect(dbUri);
 
 const schema = new mongoose.Schema({
   task: String,
