@@ -75,12 +75,12 @@ https://github.com/GustavoSFer/Coopers-front-end
 <br />
 
 # Rotas 
-* METODO 'GET' -> Buscar tasks e usuarios
+* METODO 'GET' -> Buscar tasks e usuários
   * (' / ') -> Tarefas;
 
   * (' /user ') -> Usuários;
 
-* METODO 'POST' -> Buscar tasks e usuarios
+* METODO 'POST' -> Cadastra / Buscar tasks e usuários
   * (' / ') -> Tarefas;
 
   * (' /status ') -> Busca status 'pendente' ou 'feito';
@@ -88,3 +88,6 @@ https://github.com/GustavoSFer/Coopers-front-end
   * (' /user ') -> Login de usuário;
 
   * (' /user/create ') -> Cadastro de novo usuário;
+
+* METODO 'DELETE' -> task
+  * (' /:id ') -> Remove Tarefa;
