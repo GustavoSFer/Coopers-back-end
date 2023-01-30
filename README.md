@@ -68,3 +68,23 @@ Comando que pode utilizar pelo terminal:
 
 ## Projeto parte Front-End
 https://github.com/GustavoSFer/Coopers-front-end
+
+
+<br />
+<br />
+<br />
+
+# Rotas 
+* METODO 'GET' -> Buscar tasks e usuarios
+  * (' / ') -> Tarefas;
+
+  * (' /user ') -> Usuários;
+
+* METODO 'POST' -> Buscar tasks e usuarios
+  * (' / ') -> Tarefas;
+
+  * (' /status ') -> Busca status 'pendente' ou 'feito';
+
+  * (' /user ') -> Login de usuário;
+
+  * (' /user/create ') -> Cadastro de novo usuário;
