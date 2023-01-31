@@ -1,20 +1,20 @@
-const model = require('../ConnectionMongo/user');
+const { modelUser } = require('../ConnectionMongo');
 
 
 const login = async (email) => {
-  const user = await model.findOne({ email });
+  const user = await modelUser.findOne({ email });
   
   return user;
 };
 
 const create = async (email, password) => {
-  const user = await model.create({ email, password });
+  const user = await modelUser.create({ email, password });
 
   return user;
 };
 
 const getAll = async () => {
-  const users = await model.find();
+  const users = await modelUser.find();
 
   return users;
 };

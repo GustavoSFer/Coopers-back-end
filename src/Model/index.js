@@ -1,4 +1,4 @@
-const model = require('../ConnectionMongo');
+const { model } = require('../ConnectionMongo');
 
 const getAll = async () => {
   const list = await model.find();

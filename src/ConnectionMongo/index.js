@@ -10,8 +10,19 @@ const schema = new mongoose.Schema({
   status: String,
   date: Date,
   updateDate: Date,
+  email: String,
+  password: String,
+});
+
+const schemaUser = new mongoose.Schema({
+  email: String,
+  password: String,
 });
 
 const model = mongoose.model('List', schema);
+const modelUser = mongoose.model('User', schema);
 
-module.exports = model;
+module.exports = {
+  model,
+  modelUser,
+};
