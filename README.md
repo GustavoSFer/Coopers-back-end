@@ -45,7 +45,7 @@
 Na raiz do projeto **renomeie o arquivo `.env.example` para `.env`** com as variáveis de ambiente.
 
 ```sh
-DB_URI=bancoDeDados
+DB_URI=bancoDeDados (Opção: Será enviado um por e-mail)
 PORT=3001
 ```
 
